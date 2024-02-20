@@ -1,13 +1,18 @@
 function setup(){
-    createCanvas(400,400);
+    createCanvas(800,800);
+    background(75, 125, 219);
 }
 
 function draw(){
-    let counter=0;
-    background(117, 172, 255);
-    makeCircles(200, 200, 0);
+    makeCircles(100, 100, 100);
 }
 
-function makeCircles(x,y, counter){
+function makeCircles(x, y, r){
 //issue w recursion
+    circle(x,y,r);
+    fill(235, 91, 118);
+    
+    if(r > 5){
+        makeCircles(x+r, y+r, r/2)
+    }
 }
